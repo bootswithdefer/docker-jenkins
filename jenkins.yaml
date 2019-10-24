@@ -18,3 +18,8 @@ jenkins:
       enableRestApi: false
       enableSingleSignOut: true
       forceRenewal: false
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: true
+  remotingSecurity:
+    enabled: true
