@@ -9,7 +9,8 @@ RUN curl -sSfL -o /usr/local/bin/aws-iam-authenticator https://amazon-eks.s3-us-
 
 USER jenkins
 
-COPY jenkins.yaml $JENKINS_HOME/
+COPY jenkins.yaml $JENKINS_HOME/casc_configs/
+ENV CASC_JENKINS_CONFIG $JENKINS_HOME/casc_configs
 ENV JAVA_OPTS "-Djenkins.install.runSetupWizard=false -Dorg.apache.commons.jelly.tags.fmt.timeZone=America/Phoenix ${JAVA_OPTS:-}"
 ENV TZ "America/Phoenix"
 
