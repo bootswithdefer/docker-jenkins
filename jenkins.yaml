@@ -1,0 +1,20 @@
+jenkins:
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  markupFormatter:
+    rawHtml:
+      disableSyntaxHighlighting: false
+  securityRealm:
+    cas:
+      casProtocol:
+        cas20Protocol:
+          authoritiesAttribute: "groups,roles"
+          emailAttribute: "mail"
+          fullNameAttribute: "cn"
+          proxyAllowAny: false
+          proxyEnabled: false
+      casServerUrl: "https://weblogin.asu.edu/cas/"
+      enableRestApi: false
+      enableSingleSignOut: true
+      forceRenewal: false
