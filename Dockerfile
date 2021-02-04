@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.275
+FROM jenkins/jenkins:2.278
 
 MAINTAINER Jesse DeFer <docker-jenkins@dotd.com>
 
