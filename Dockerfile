@@ -6,7 +6,7 @@ RUN jenkins-plugin-cli --verbose --plugins scm-api sonar saml cas-plugin ant art
 
 USER root
 # https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html
-ENV AWS_IAM_AUTHENTICATOR_URL=https://github.com/kubernetes-sigs/aws-iam-authenticator/releases/download/v0.5.12/aws-iam-authenticator_0.5.12_linux_amd64
+ENV AWS_IAM_AUTHENTICATOR_URL=https://github.com/kubernetes-sigs/aws-iam-authenticator/releases/download/v0.6.2/aws-iam-authenticator_0.6.2_linux_amd64
 RUN curl -sSfL -o /usr/local/bin/aws-iam-authenticator ${AWS_IAM_AUTHENTICATOR_URL} && \
     chmod a+rx /usr/local/bin/aws-iam-authenticator
 
