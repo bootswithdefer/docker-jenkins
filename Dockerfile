@@ -10,6 +10,8 @@ ENV AWS_IAM_AUTHENTICATOR_URL=https://github.com/kubernetes-sigs/aws-iam-authent
 RUN curl -sSfL -o /usr/local/bin/aws-iam-authenticator ${AWS_IAM_AUTHENTICATOR_URL} && \
     chmod a+rx /usr/local/bin/aws-iam-authenticator
 
+RUN ssh-keyscan github.com > /etc/ssh/ssh_known_hosts
+
 USER jenkins
 
 #COPY jenkins.yaml /casc_configs/
